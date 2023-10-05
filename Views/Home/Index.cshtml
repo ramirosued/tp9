@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<form action='@Url.Action("Login","Account")' method="post">
+    <input autocomplete="off" type="text" name="username" required placeholder="Ingrese Username">
+    <input autocomplete="off" type="password" name="contraseña" required placeholder="Ingrese contraseña">
+    <input type="submit" value="Iniciar sesión">
+</form>
+
+<a href='@Url.Action("Registro", "Home")'>Registrarse</a>
+<a href='@Url.Action("CambiarContraseña", "Home")'>Olvide mi contraseña</a>
