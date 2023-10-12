@@ -3,20 +3,13 @@
 
 // Write your JavaScript code.
 
-let campoContraseña = document.getElementById('contraseña').value;
-let campoContraseña2 = document.getElementById('contraseña2').value;
-let coinciden;
 
-if(campoContraseña.length > 8){
-    coinciden = true
-    return coinciden
+
+function verificarContraseña() {
+    let campoContraseña = document.getElementById('contraseña1').value;
+    let campoContraseña2 = document.getElementById('contraseña2').value;
+    let verificada=campoContraseña.length >= 8 && campoContraseña==campoContraseña2
+    return verificada
+
 }
 
-if(campoContraseña == campoContraseña2){
-    coinciden = true
-    return coinciden
-}else{
-    contraseñaaa.innerHTML = "Las contraseñas no coinciden"
-    coindiden = false
-    return coinciden
-}
