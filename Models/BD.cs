@@ -9,10 +9,10 @@ public static class BD
 
     public static void CrearUsuario(Usuario us)
     {
-        using (SqlConnection BD = new SqlConnection(connectionString))
+        using (SqlConnection BD = new SqlConnection(_connectionString))
         {
-            string sql = "INSERT INTO Usuario([username],[contraseña],[nombre],[email],[telefono]) VALUES(@Username,@Contraseña,@Nombre,@Email,@Telefono)";
-            BD.Execute(sql, new { Username = us.username, Contraseña = us.contraseña, Nombre = us.nombre, Email = us.email, Telefono = us.telefono });
+            string sql = "INSERT INTO Usuario([username],[contraseña],[nombre],[email]) VALUES(@Username,@Contraseña,@Nombre,@Email)";
+            BD.Execute(sql, new { Username = us.username, Contraseña = us.contraseña, Nombre = us.nombre, Email = us.email });
         }
     }
 
